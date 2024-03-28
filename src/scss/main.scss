@@ -1,0 +1,141 @@
+// Import Bootstrap source Sass files
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// Import Bootstrap icons
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons";
+
+// Javascript select styles
+.image {
+  position: relative;
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0.313rem solid transparent;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #db3434;
+  }
+
+  &.selected {
+    border-color: #db3434;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0.125rem;
+      right: 0.75rem;
+      transform: rotate(45deg);
+      height: 1.5rem;
+      width: 0.75rem;
+      border-bottom: 7px solid #db3434;
+      border-right: 7px solid #db3434;
+    }
+  }
+}
+
+// CSS only selected styles
+input[type="checkbox"] {
+  display: none;
+
+  &:checked + .custom-checkbox {
+    border-color: #db3434;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0.125rem;
+      right: 0.75rem;
+      transform: rotate(45deg);
+      height: 1.5rem;
+      width: 0.75rem;
+      border-bottom: 7px solid #db3434;
+      border-right: 7px solid #db3434;
+    }
+  }
+}
+
+.custom-checkbox {
+  position: relative;
+  padding-top: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  border: 0.313rem solid transparent;
+  transition: border-color 0.3s ease;
+  background-size: cover;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #db3434;
+  }
+
+  &[for="checkbox1"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-6578722caea701702392364_medium.jpg");
+  }
+  &[for="checkbox2"] {
+    background-image: url("https://acre-images.s3.amazonaws.com/image-5ac62b9e561041522936734_medium.jpeg");
+  }
+  &[for="checkbox3"] {
+    background-image: url("https://acre-images.s3.amazonaws.com/image-5acac631504581523238449_medium.jpeg");
+  }
+  &[for="checkbox4"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-65787222618211702392354_medium.jpg");
+  }
+  &[for="checkbox5"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-657872175b22e1702392343_medium.jpg");
+  }
+  &[for="checkbox6"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-657871ff7d8401702392319_medium.jpg");
+  }
+  &[for="checkbox7"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-6576286c7c4b61702242412_medium.jpg");
+  }
+  &[for="checkbox8"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-6578af5f9af671702408031_medium.jpg");
+  }
+  &[for="checkbox9"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-657872175b22e1702392343_medium.jpg");
+  }
+  &[for="checkbox10"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-657871ff7d8401702392319_medium.jpg");
+  }
+  &[for="checkbox11"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-6576286c7c4b61702242412_medium.jpg");
+  }
+  &[for="checkbox12"] {
+    background-image: url("https://acre-images.s3.amazonaws.com/image-5b01cdf4b2e9a1526844916.jpg");
+  }
+  &[for="checkbox13"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-657872175b22e1702392343_medium.jpg");
+  }
+  &[for="checkbox14"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-657871ff7d8401702392319_medium.jpg");
+  }
+  &[for="checkbox15"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-6576286c7c4b61702242412_medium.jpg");
+  }
+  &[for="checkbox16"] {
+    background-image: url("https://acre-images.s3.amazonaws.com/image-5b01cdf4b2e9a1526844916.jpg");
+  }
+  &[for="checkbox17"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-657872175b22e1702392343_medium.jpg");
+  }
+  &[for="checkbox18"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-657871ff7d8401702392319_medium.jpg");
+  }
+  &[for="checkbox19"] {
+    background-image: url("https://acre-image-collections.s3.amazonaws.com/image-6576286c7c4b61702242412_medium.jpg");
+  }
+  &[for="checkbox20"] {
+    background-image: url("https://acre-images.s3.amazonaws.com/image-5b01cdf4b2e9a1526844916.jpg");
+  }
+}
+
+// Lazy loading styles
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  &.loaded {
+    opacity: 1;
+  }
+}
